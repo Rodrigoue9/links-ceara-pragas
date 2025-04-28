@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Ceara pragas</title>
+
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container do Cabeçalho */
+        header {
+            width: 100%;
+          
+      
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Logo - espaço reservado */
+        .logo {
+            width: 100%;
+            max-width: 350px; /* Ajuste o tamanho máximo conforme necessário */
+            height: auto;
+            display: block;
+           /* Espaçamento inferior */
+            object-fit: contain; /* Garante que a imagem mantenha a proporção */
+        }
+
+        /* Botões Estilo Atualizado */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        button {
+            width: 165px;
+            height: 62px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 17px;
+            border-radius: 1rem;
+            border: none;
+            position: relative;
+            background: #100720;
+            transition: 0.1s;
+            margin: 10px;
+        }
+
+        button::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+            filter: blur(15px);
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        button:active {
+            transform: scale(0.9) rotate(3deg);
+            background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+            transition: 0.5s;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+        
+
+            .buttons-container {
+                margin-top: 30px;
+            }
+
+            button {
+                width: 150px;
+                height: 55px;
+            }
+
+            .logo {
+                max-width: 200px; /* Ajuste o tamanho máximo para dispositivos menores */
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header, .buttons-container {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img class="logo" src="img/logo.png" alt="Logo Ceara Pragas">
+</header>
+
+<div class="buttons-container">
+    <a href="https://api.whatsapp.com/send?phone=+5585984255911&text=Ol%C3%A1!%20Quero%20atendimento" target="_blank">
+        <button>WhatsApp</button>
+    </a>
+    <a href="https://www.instagram.com/cearapragas/" target="_blank">
+        <button>Instagram</button>
+    </a>
+    <a href="https://ceara-pragas.netlify.app/" target="_blank">
+        <button>Site</button>
+    </a>
+</div>
+
+
+
+</body>
+</html>
