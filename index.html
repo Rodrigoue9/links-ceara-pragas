@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links Ceara pragas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
         /* Reset de estilos básicos */
@@ -28,14 +30,16 @@
         /* Container do Cabeçalho */
         header {
             width: 100%;
-          
-      
+         
+       
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
-
+a{
+    text-decoration: none;
+}
         /* Logo - espaço reservado */
         .logo {
             width: 100%;
@@ -46,7 +50,7 @@
             object-fit: contain; /* Garante que a imagem mantenha a proporção */
         }
 
-        /* Botões Estilo Atualizado */
+        /* Botões com ícones */
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -55,7 +59,7 @@
         }
 
         button {
-            width: 165px;
+            width: 200px;
             height: 62px;
             cursor: pointer;
             color: #fff;
@@ -66,6 +70,10 @@
             background: #100720;
             transition: 0.1s;
             margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Espaço entre o ícone e o texto */
         }
 
         button::after {
@@ -86,16 +94,22 @@
             transition: 0.5s;
         }
 
+        button i {
+            font-size: 20px; /* Ajuste o tamanho do ícone */
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
-        
+            header {
+                padding: 20px 5%;
+            }
 
             .buttons-container {
                 margin-top: 30px;
             }
 
             button {
-                width: 150px;
+                width: 180px;
                 height: 55px;
             }
 
@@ -121,18 +135,27 @@
 <header>
     <img class="logo" src="img/logo.png" alt="Logo Ceara Pragas">
 </header>
-
-<div class="buttons-container">
-    <a href="https://api.whatsapp.com/send?phone=+5585984255911&text=Ol%C3%A1!%20Quero%20atendimento" target="_blank">
-        <button>WhatsApp</button>
-    </a>
-    <a href="https://www.instagram.com/cearapragas/" target="_blank">
-        <button>Instagram</button>
-    </a>
-    <a href="https://ceara-pragas.netlify.app/" target="_blank">
-        <button>Site</button>
-    </a>
-</div>
+    
+    <div class="buttons-container">
+        <a href="https://api.whatsapp.com/send?phone=+5585984255911&text=Ol%C3%A1!%20Quero%20atendimento" target="_blank">
+            <button>
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+        </a>
+        <a href="https://www.instagram.com/cearapragas/" target="_blank">
+            <button>
+                <i class="fab fa-instagram"></i> Instagram
+            </button>
+        </a>
+        <a href="https://ceara-pragas.netlify.app/" target="_blank">
+            <button>
+                <i class="fas fa-link"></i> Site
+            </button>
+        </a>
+    </div>
+    
+   
+    
 
 
 
